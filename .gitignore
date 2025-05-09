@@ -1,0 +1,13 @@
+refactor-api
+.env
+.pytest_cache
+**__pycache__/
+.coverage
+db.sqlite3
+schema.yml
+.vscode
+htmlcov
+celerybeat-data/
+redis-data/
+*.sql
+*.dump
