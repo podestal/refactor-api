@@ -13,6 +13,7 @@ cachetools==5.5.0
 celery==5.4.0
 certifi==2024.8.30
 cffi==1.17.1
+chardet==5.2.0
 charset-normalizer==3.4.0
 click==8.1.8
 click-didyoumean==0.3.1
@@ -84,6 +85,7 @@ pytest==8.3.4
 pytest-django==4.9.0
 python-crontab==3.2.0
 python-dateutil==2.9.0.post0
+python-magic==0.4.27
 python3-openid==3.2.0
 pytz==2024.2
 pywebpush==2.0.3

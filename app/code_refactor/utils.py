@@ -1,0 +1,23 @@
+def detect_language_from_filename(filename):
+    ext = filename.split('.')[-1].lower()
+    return {
+        'py': 'Python',
+        'js': 'JavaScript',
+        'ts': 'TypeScript',
+        'html': 'HTML',
+        'css': 'CSS',
+        'java': 'Java',
+        'cpp': 'C++',
+        'c': 'C',
+        'rb': 'Ruby',
+        'php': 'PHP',
+        'go': 'Go',
+        'rs': 'Rust',
+        'kt': 'Kotlin',
+        'sql': 'SQL',
+        'sh': 'Shell',
+        'xml': 'XML',
+        'json': 'JSON',
+        'yml': 'YAML',
+        'yaml': 'YAML',
+    }.get(ext, 'Unknown')
