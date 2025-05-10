@@ -1,17 +1,17 @@
 '''
-This module defines the database models for the code refactoring application.
-These models represent the core entities involved in the analysis and refactoring
-process, including projects, code files, dependencies, and external services.
-Each model is defined as a class that inherits from `django.db.models.Model`.
-The models include:
-- `Project`: Represents a project being analyzed or refactored.
-- `CodeFile`: Represents a file within a project, including its content and metadata.
-- `Dependency`: Represents a dependency relationship between two code files.
-- `ExternalService`: Represents an external service (e.g., API, database) used by a project or file.
+This module defines the serializers for the code refactoring application.
+These serializers are used to convert complex data types, such as Django models,
+into JSON format for API responses and to validate incoming data for API requests.
+The serializers include:
+- `ProjectSerializer`: Serializes the `Project` model.
+- `CodeFileSerializer`: Serializes the `CodeFile` model.
+- `DependencySerializer`: Serializes the `Dependency` model.
+- `ExternalServiceSerializer`: Serializes the `ExternalService` model.  
 '''
 
 from . import models
 from rest_framework import serializers
+
 
 '''
 Represents a project being analyzed or refactored.
@@ -46,7 +46,7 @@ class DependencySerializer(serializers.ModelSerializer):
         model = models.Dependency
         fields = '__all__'
 
-        
+
 '''
 Represents an external service (e.g., API, database) used by a project or file.
 Includes fields for the service name, type, and any relevant configuration details.

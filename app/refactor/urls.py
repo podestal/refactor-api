@@ -28,5 +28,5 @@ if settings.DEBUG:
 
 urlpatterns += [
     path('admin/', admin.site.urls),
-    # path('api/', include('code_refactor.urls')),
+    path('api/', include('code_refactor.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
