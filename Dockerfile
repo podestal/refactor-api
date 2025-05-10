@@ -9,7 +9,7 @@ COPY ./requirements.txt /tmp/requirements.txt
 COPY ./scripts /scripts
 COPY ./app /app
 
-COPY ./app/amauta/staticfiles /vol/web/static/
+# COPY ./app/refactor/staticfiles /vol/web/static/
 
 WORKDIR /app
 EXPOSE 8000
