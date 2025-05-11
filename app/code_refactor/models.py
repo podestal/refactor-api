@@ -75,11 +75,3 @@ class ExternalService(models.Model):
     def __str__(self):
         return f"{self.service_type} in {self.file.path}"
     
-
-'''Example to learn how to work with fiels in django'''
-class MyUpload(models.Model):
-    title = models.CharField(max_length=100)
-    file = models.FileField(upload_to='uploads/')
-
-    def __str__(self):
-        return self.title
