@@ -143,4 +143,14 @@ class MyUploadViewSet(viewsets.ModelViewSet):
         print('path:', my_upload.file.path)
         with tempfile.TemporaryDirectory() as temp_dir:
             print(f'this is my tempdir {temp_dir}')
+            with zipfile.ZipFile(my_upload.file.path, 'r') as zip_ref:
+                zip_ref.extractall(temp_dir)
+                print(f'Extracted files to {temp_dir}')
+                for root, _, files in os.walk(temp_dir):
+                    for file in files:
+                        print(os.path.join(root, file))
+
+
+
+
         return Response(serializer.data, status=status.HTTP_201_CREATED)
