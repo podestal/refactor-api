@@ -122,4 +122,11 @@ class ExternalServiceViewSet(viewsets.ModelViewSet):
     """
     queryset = models.ExternalService.objects.all()
     serializer_class = serializers.ExternalServiceSerializer
-    
+
+
+class MyUploadViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing MyUpload instances.
+    """
+    queryset = models.MyUpload.objects.all()
+    serializer_class = serializers.MyUploadSerializer

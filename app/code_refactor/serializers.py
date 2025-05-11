@@ -55,3 +55,9 @@ class ExternalServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.ExternalService
         fields = '__all__'
+
+
+class MyUploadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.MyUpload
+        fields = '__all__'

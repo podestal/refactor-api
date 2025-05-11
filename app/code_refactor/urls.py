@@ -17,4 +17,5 @@ router.register('projects', views.ProjectViewSet, basename='projects')
 router.register('codefiles', views.CodeFileViewSet, basename='codefiles')
 router.register('dependencies', views.DependencyViewSet, basename='dependencies')
 router.register('externalservices', views.ExternalServiceViewSet, basename='externalservices')
+router.register('myuploads', views.MyUploadViewSet )
 urlpatterns = router.urls
