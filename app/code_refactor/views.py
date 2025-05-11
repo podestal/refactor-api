@@ -130,3 +130,15 @@ class MyUploadViewSet(viewsets.ModelViewSet):
     """
     queryset = models.MyUpload.objects.all()
     serializer_class = serializers.MyUploadSerializer
+
+    def create(self, request, *args, **kwargs):
+        """
+        Handles the creation of MyUpload instances.
+        This includes processing uploaded files and creating code file instances.
+        """
+        
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        my_upload = serializer.save()
+        print('path:', my_upload.file.path)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
