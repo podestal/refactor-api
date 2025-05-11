@@ -11,3 +11,4 @@ celerybeat-data/
 redis-data/
 *.sql
 *.dump
+uploads
