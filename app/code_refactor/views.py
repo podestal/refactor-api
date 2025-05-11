@@ -141,4 +141,6 @@ class MyUploadViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         my_upload = serializer.save()
         print('path:', my_upload.file.path)
+        with tempfile.TemporaryDirectory() as temp_dir:
+            print(f'this is my tempdir {temp_dir}')
         return Response(serializer.data, status=status.HTTP_201_CREATED)
